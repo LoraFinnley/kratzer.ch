@@ -1,0 +1,54 @@
+body {
+    font-family: 'Baloo Chettan 2', cursive;
+    margin: 0;
+}
+
+.linkOnGreen {
+    color: #fefefd;
+    font-size: 1.5rem;
+}
+
+.linkOnGreen:hover {
+    color: #666666;
+}
+
+.greenScheme {
+    background-color: #AFD198;
+}
+
+.title_img {
+    width: 70%;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box !important;
+    transition: ease all 0.5s;
+}
+
+/* Title section start */ 
+
+.title_section {
+    width: 100%;
+    float: left;
+    padding: 50px 0px 80px 0px;
+}
+
+.title_section h1 {
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: 'Baloo Chettan 2', cursive ;
+}
+
+
+.layout_padding {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+/* Title section end */

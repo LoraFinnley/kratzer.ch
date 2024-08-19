@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- site meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <% if (locals.siteTitle) { %> <%= siteTitle %> <% } else { %> 🐮 Kratzers
+      Gallowayhof<% } %>
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/general/favicon.ico" type="image/gif" />
+
+    <!-- font css -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- personal css -->
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <div class="greenScheme">
+        <div class="container">
+          <nav class="navbar sticky-top navbar-expand-lg">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link linkOnGreen" href="#">Home</a>
+                  <a class="nav-link linkOnGreen" href="#">Produkte</a>
+                  <a class="nav-link linkOnGreen" href="#">Gallerie</a>
+                  <a class="nav-link linkOnGreen" href="#">Kontakt</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Navbar end -->
+    </header>
+  </body>
+</html>
