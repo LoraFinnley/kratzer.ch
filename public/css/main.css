@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+p {
+    text-align: center;
+}
+
 .linkOnGreen {
     color: #fefefd;
     font-size: 1.5rem;
@@ -25,7 +29,6 @@ img {
 }
 
 * {
-    box-sizing: border-box !important;
     transition: ease all 0.5s;
 }
 
@@ -37,17 +40,21 @@ img {
     padding: 50px 0px 80px 0px;
 }
 
-.title_section h1 {
+.title_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 50px;
     font-weight: bold;
-    line-height: 50px;
     font-family: 'Baloo Chettan 2', cursive ;
 }
 
+.text-center {
+    padding: 0;
+}
 
 .layout_padding {
-    padding-top: 50px;
     padding-bottom: 0px;
 }
 
@@ -57,3 +64,55 @@ img {
 
 /* carousel css */
 
+.product_section {  
+    width: 100%;
+    float: left;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.remove_padding {
+    padding: 0;
+}
+
+.product_title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #060606;
+    font-weight: bold;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+.carousel_section {
+    width: 100%;
+    float: left;
+}
+.product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hover01 figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hover01 figure:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+figure:hover+span {
+    bottom: -36px;
+    opacity: 1;
+}
