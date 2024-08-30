@@ -1,3 +1,8 @@
+#gallery_title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .grid {
   display: flex;
