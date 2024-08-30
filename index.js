@@ -5,18 +5,22 @@ import { fileURLToPath } from "url";
 import path from 'path';
 
 const app = express();
-
-app.set('view engine', 'ejs');
-
-const port = 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Setze den View-Engine und das Views-Verzeichnis
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Verwende Body-Parser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Statisches Verzeichnis korrekt setzen
+app.use(express.static(path.join(__dirname, 'public')));
+
+const port = 3000;
 var siteTitle = "🐮 Kratzers Gallowayhof";
 
-app.set('views', path.join(__dirname, 'views'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
-
+//Routen
 app.get("/", (req, res) => {
     siteTitle = "🐮 Kratzers Gallowayhof - Home";
     res.render(__dirname + "/views/index.ejs", {siteTitle: siteTitle});
