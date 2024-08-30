@@ -1,5 +1,17 @@
 // masonry.js
 
+function initMasonry() {
+  const grid = document.querySelector('.grid');
+  if (grid) {
+    new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-item',
+      percentPosition: true,
+      gutter: 20
+    });
+  }
+}
+
 // Initialisiere Masonry nach dem Laden des DOM
 document.addEventListener('DOMContentLoaded', function () {
   const grid = document.querySelector('.grid');
