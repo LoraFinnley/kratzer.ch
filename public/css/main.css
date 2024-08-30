@@ -11,6 +11,9 @@ h1 {
   font-size: 3.5rem;
 }
 
+.quote {
+    font-style: italic;
+}
 
 .linkOnGreen {
     color: #fefefd;

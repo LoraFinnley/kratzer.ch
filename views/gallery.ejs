@@ -1,34 +1,132 @@
 <%- include('partials/header.ejs') %>
-<div id="gallery_section">
-  <div class="image-grid">
-    <div class="image-item">
-      <img
-        src="/images/gallery/alp.jpg"
-        onclick="openModal();currentSlide(1)"
-        alt="Auf dem Weg auf die Alp"
-      />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/dächimatte winter.jpg" alt="Image 2" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/dächimatte.jpg" alt="Image 3" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/esther auf hof.jpg" alt="Image 4" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/galloway auf weide.jpg" alt="Image 5" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/galloway kuh.jpg" alt="Image 6" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/galloway mit kalb.jpg" alt="Image 7" />
-    </div>
-    <div class="image-item">
-      <img src="/images/gallery/gwudnernase.jpg" alt="Image 8" />
-    </div>
+<div id = "gallery_title">
+  <h1>Gallerie</h1>
+  <p class = "quote">"Zeit, die wir uns nehmen, ist Zeit, die uns etwas gibt."</p>
+  <p>- Ernst Ferstl</p>
+</div>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/alp.jpg"
+      alt="Weg auf die Alp"
+      onclick="openLightbox(this.src)"
+    />
   </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/dächimatte winter.jpg"
+      alt="Dächimatte im Winter"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/dächimatte.jpg"
+      alt="Dächimatte"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/esther auf hof.jpg"
+      alt="Esther auf dem Hof"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/galloway auf weide.jpg"
+      alt="Bild 5"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/galloway kuh.jpg"
+      alt="Galloway Kuh"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/gwudnernase.jpg"
+      alt="Neugierige Galloway Kuh"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/galloway mit kalb.jpg"
+      alt="Galloway Kuh mit Kalb"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/hof im winter.jpg"
+      alt="Dächimatte im Winter"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/harry auf traktor.jpg"
+      alt="Yoko auf Traktor"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/kalb.jpg"
+      alt="Galloway Kalb"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/niesen im winter.jpg"
+      alt="Niesen im Winter"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/huhn.jpg"
+      alt="Huhn"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/ueli auf der alp.jpg"
+      alt="Ueli auf der Alp"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/ueli bei regen.jpg"
+      alt="Ueli bei Regen"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <div class="grid-item">
+    <img
+      src="/images/gallery/Siberschüür.jpg"
+      alt="Siberschüür"
+      onclick="openLightbox(this.src)"
+    />
+  </div>
+  <!-- Weitere Bilder hinzufügen -->
+</div>
+</div>
+<!-- Lightbox Container -->
+<div id="lightbox" class="lightbox" style="display: none;">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-image" src="">
+  <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+  <a class="next" onclick="changeImage(1)">&#10095;</a>
 </div>
 <%- include('partials/footer.ejs') %>
