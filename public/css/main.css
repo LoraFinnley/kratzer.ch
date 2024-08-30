@@ -229,6 +229,61 @@ figure:hover+span {
     font-size: 1.25rem;
 }
 
+/* Gallery */
+
+#gallery_section {
+  min-height: 100vh;
+  padding: 20px 0; /* Optional: Abstand oben und unten */
+}
+
+.image-grid {
+  display: grid;
+  gap: 10px; /* Abstand zwischen den Bildern */
+  width: 90%;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-flow: dense; /* Automatische Platzierung der Elemente */
+}
+/* Ein Spalte auf Handygröße */
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Zwei Spalten auf Tablet-Bildschirmen */
+@media (min-width: 601px) and (max-width: 992px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Vier Spalten auf Laptops und großen Monitoren */
+@media (min-width: 993px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Passt die Bildhöhe automatisch an den Inhalt an */
+.image-item {
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.image-item:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto; /* Beibehaltung der Originalbildgröße */
+  display: block;
+  object-fit: cover;
+}
+
+
+/* Media Queries */
 
 @media (max-width: 991px) {
   #title_section {

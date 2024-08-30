@@ -19,6 +19,16 @@ app.get("/", (req, res) => {
     res.render(__dirname + "/views/index.ejs", {siteTitle: siteTitle});
   });
 
+app.get("/gallery", (req, res) => {
+    siteTitle = "🐮 Kratzers Gallowayhof - Gallery";
+
+    /* Gallery Script */
+
+
+    res.render(__dirname + "/views/gallery.ejs", {siteTitle: siteTitle});
+  });
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
