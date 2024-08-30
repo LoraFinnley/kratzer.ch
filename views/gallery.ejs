@@ -117,4 +117,11 @@
   <!-- Weitere Bilder hinzufügen -->
 </div>
 </div>
+<!-- Lightbox Container -->
+<div id="lightbox" class="lightbox" style="display: none;">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-image" src="">
+  <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+  <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
 <%- include('partials/footer.ejs') %>
