@@ -16,6 +16,9 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "g": "^2.0.1",
+    "jquery": "^3.7.1",
+    "jquery-bridget": "^3.0.1",
+    "masonry-layout": "^4.2.2",
     "path": "^0.12.7",
     "vercel": "^37.2.1"
   }
