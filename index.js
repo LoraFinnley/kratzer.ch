@@ -2,8 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import path from 'path';
 
 const app = express();
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 const port = 3000;
