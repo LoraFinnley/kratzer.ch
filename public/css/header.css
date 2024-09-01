@@ -10,3 +10,10 @@
 .linkOnGreen:hover {
     color: #666666;
 }
+
+@media (max-width: 575px) {
+    .greenScheme  .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}

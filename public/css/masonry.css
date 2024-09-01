@@ -7,7 +7,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px auto;
+  margin: auto;
   max-width: 1200px;
   justify-content: center;
 }
@@ -15,7 +15,6 @@
 .grid-item {
   width: calc(33.333% - 20px);
   margin-bottom: 15px;
-  padding: 10px;
 }
 
 .grid-item img {
@@ -25,21 +24,21 @@
   cursor: pointer;
 }
 
-/* Responsive Design - 2 Spalten auf Tablets */
 @media (max-width: 992px) {
   .grid-item {
-    width: calc(50% - 20px); /* Berechneter Wert für 2 Spalten minus Abstand */
+    width: calc(33.333% - 20px);
   }
 }
 
-/* Responsive Design - 1 Spalte auf Mobilgeräten */
+
 @media (max-width: 768px) {
   .grid {
-    padding: 0 10px; /* HINZUGEFÜGT: sorgt für gleichmäßigen Rand auf beiden Seiten */
+    padding: 0 10px;
+    
   }
   .grid-item {
-    width: 100%; /* GEÄNDERT: Setzt die Breite auf 100% des Elterncontainers */
-    max-width: 400px; /* HINZUGEFÜGT: Beschränkt die maximale Breite, um das Bild zu zentrieren */
+    width: calc(50% - 20px); 
+    max-width: 400px; 
     margin: 0 auto 15px; /* GEÄNDERT: Zentriert das Grid-Element und fügt unten Abstand hinzu */
   }
 }

@@ -3,9 +3,7 @@
 function initMasonry() {
   var grid = document.querySelector('.grid');
   if (grid) {
-    // Nutze imagesLoaded, um sicherzustellen, dass alle Bilder geladen sind
     imagesLoaded(grid, function() {
-      // Initialisiere Masonry erst nach dem Laden der Bilder
       new Masonry(grid, {
         itemSelector: '.grid-item',
         columnWidth: '.grid-item',
