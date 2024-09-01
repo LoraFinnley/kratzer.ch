@@ -3,26 +3,22 @@
 function initMasonry() {
   var grid = document.querySelector('.grid');
   if (grid) {
-    new Masonry(grid, {
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-item',
-      percentPosition: true,
-      gutter: 20
+    // Nutze imagesLoaded, um sicherzustellen, dass alle Bilder geladen sind
+    imagesLoaded(grid, function() {
+      // Initialisiere Masonry erst nach dem Laden der Bilder
+      new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true,
+        gutter: 20
+      });
     });
   }
 }
 
-
 // Initialisiere Masonry nach dem Laden des DOM
 document.addEventListener('DOMContentLoaded', function () {
-  const grid = document.querySelector('.grid');
-  const masonry = new Masonry(grid, {
-    // Optionen für Masonry
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-item',
-    percentPosition: true,
-    gutter: 20
-  });
+  initMasonry();
 });
 
 
