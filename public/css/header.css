@@ -1,0 +1,12 @@
+.greenScheme {
+    background-color: #AFD198;
+}
+
+.linkOnGreen {
+    color: #fefefd;
+    font-size: 1.5rem;
+}
+
+.linkOnGreen:hover {
+    color: #666666;
+}

@@ -1,7 +1,7 @@
 // masonry.js
 
 function initMasonry() {
-  const grid = document.querySelector('.grid');
+  var grid = document.querySelector('.grid');
   if (grid) {
     new Masonry(grid, {
       itemSelector: '.grid-item',
@@ -11,6 +11,7 @@ function initMasonry() {
     });
   }
 }
+
 
 // Initialisiere Masonry nach dem Laden des DOM
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gutter: 20
   });
 });
+
 
 
 // Initialize the lightbox
